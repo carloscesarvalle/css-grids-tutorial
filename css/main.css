@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 30px;
+}
+
+
+.container {
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 3(repeat, 1fr);
+    grid-template-rows: 20% 1fr 20%;
+    /* using grid-template property 
+    grid-template: 
+    "header header header" 1fr
+    "nav main ads" 3fr
+    "footer footer footer" 1fr /
+    20% 1fr 20%;*/
+}
+
+.element {
+    background-color: gray;
+    border: 15px green solid;
+    padding: 25px
+}
+
+.header {
+    /* this is shortcut for grid-column-start and grid-column-end properties
+    grid-row: 1/2;
+    grid-column: 1/4; */
+    /* I can also use grid-area property as a shortcut: row star / column start / row end / column end */
+    grid-area: 1 / 1 / 2 / 4
+    /* using grid-template property 
+    grid-area: header; */
+}
+
+.nav {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    /* using grid-template property 
+    grid-area: nav; */
+}
+
+.main {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    /* using grid-template property 
+    grid-area: main; */
+}
+
+.ads {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    /* using grid-template property 
+    grid-area: ads; */
+}
+
+.footer {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    /* using grid-template property 
+    grid-area: footer; */
+}
