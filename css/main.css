@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&display=swap');
+
 *,
 ::before,
 ::after {
@@ -7,6 +9,7 @@
 }
 
 html {
+    font-family: 'Inter', sans-serif;
     font-size: 30px;
 }
 
@@ -33,31 +36,32 @@ html {
 
 .header {
     /* this is shortcut for grid-column-start and grid-column-end properties
+     */
     grid-row: 1/2;
-    grid-column: 1/4; */
+    grid-column: 1/4;
     /* I can also use grid-area property as a shortcut: row star / column start / row end / column end */
-    grid-area: 1 / 1 / 2 / 4
+    /* grid-area: 1 / 1 / 2 / 4 */
     /* using grid-template property 
     grid-area: header; */
 }
 
 .nav {
     grid-column: 1/2;
-    grid-row: 2/4;
+    grid-row: 2/3;
     /* using grid-template property 
     grid-area: nav; */
 }
 
 .main {
     grid-column: 2/3;
-    grid-row: 2/4;
+    grid-row: 2/3;
     /* using grid-template property 
     grid-area: main; */
 }
 
 .ads {
     grid-column: 3/4;
-    grid-row: 2/4;
+    grid-row: 2/3;
     /* using grid-template property 
     grid-area: ads; */
 }
@@ -67,4 +71,36 @@ html {
     grid-row: 3/4;
     /* using grid-template property 
     grid-area: footer; */
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template: 
+            "header" 1fr
+            "nav" 1fr
+            "main" 1fr
+            "ads" 1fr
+            "footer" 1fr /
+            1fr;
+        }
+
+        .header{
+            grid-area:header;
+        }
+
+        .nav{
+            grid-area:nav;
+        }
+
+        .main{
+            grid-area:main;
+        }
+
+        .ads{
+            grid-area:ads;
+        }
+
+        .footer{
+            grid-area:footer;
+        }
 }
