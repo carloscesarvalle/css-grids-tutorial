@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&display=swap');
 
+/* variables in root  */
 :root {
     --main-radius: 5px;
     --main-padding:5px;
@@ -28,9 +29,9 @@ html {
     /* using grid-template property 
     grid-template: 
     "header header header header" 0.2fr
-    "nav main ads" 2.7fr
-    "footer footer footer" 1fr /
-    20% 1fr 20%;*/
+    "nav main ads" 3fr
+    "footer footer footer" 0.8fr /
+    1fr 1fr 1fr 1fr;*/
 }
 
 .element {
