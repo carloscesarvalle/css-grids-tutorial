@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&display=swap');
 
+:root {
+    --main-radius: 5px;
+    --main-padding:5px;
+}
+
 *,
 ::before,
 ::after {
@@ -17,7 +22,7 @@ html {
 .container {
     height: 100vh;
     display: grid;
-    gap: 5px;
+    gap: 0.2rem;
     grid-template-columns: 4(repeat, 1fr);
     grid-template-rows: 0.2fr 3fr 0.8fr;
     /* using grid-template property 
@@ -31,7 +36,9 @@ html {
 .element {
     background-color: gray;
     border: 15px green solid;
-    padding: 25px
+    padding: 25px;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding); 
 }
 
 .header {
